@@ -1,0 +1,20 @@
+{
+  "name": "design-db",
+  "version": "1.0.0",
+  "description": "-- Table: Users\r CREATE TABLE Users (\r     id SERIAL PRIMARY KEY,\r     name VARCHAR(255) NOT NULL,\r     email VARCHAR(255) UNIQUE NOT NULL,\r     password VARCHAR(255) NOT NULL,\r     role VARCHAR(50) NOT NULL CHECK (role IN ('student', 'instructor', 'admin')),\r     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\r     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\r );",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0",
+    "pg": "^8.12.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.3"
+  }
+}
